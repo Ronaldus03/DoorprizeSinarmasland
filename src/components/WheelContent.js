@@ -100,7 +100,8 @@ const WheelContent = () => {
             buttonText="SPIN"
             isOnlyOnce={false}
             size={260}
-            upDuration={50}
+            //tadi ini 50
+            upDuration={30}
             downDuration={400}
             id="canvas2"
             textspace={90}
@@ -161,6 +162,7 @@ const WheelContent = () => {
         </div>
         
       </div>
+      
       <AnimatePresence>
         {showPopup && (
           <motion.div
@@ -180,7 +182,7 @@ const WheelContent = () => {
                 className="bg-white rounded-lg p-10 m-5 space-y-6 max-w-3xl w-full mx-auto"
               >
                 <div className="absolute inset-0 w-full h-full max-w-3xl mx-auto my-5 pointer-events-none">
-                  <Confetti width="740" height="340" />
+                  <Confetti width="770" height="700" />
                 </div>
                 <p className="text-6xl text-slate-700 font-bold text-center w-full">
                   Winner Doorprize
