@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/DoorprizeSinarmasland/static/css/main.ba526947.css",
+    "main.js": "/DoorprizeSinarmasland/static/js/main.7fc822fe.js",
+    "static/media/UNITED NATIONS day 2023 (1).png": "/DoorprizeSinarmasland/static/media/UNITED NATIONS day 2023 (1).627f285f8a1cd703a7af.png",
+    "static/media/celebration.mp3": "/DoorprizeSinarmasland/static/media/celebration.579c306f0724d5ca0587.mp3",
+    "static/media/tick.mp3": "/DoorprizeSinarmasland/static/media/tick.a830ac2f517b551eac3f.mp3",
+    "index.html": "/DoorprizeSinarmasland/index.html",
+    "main.ba526947.css.map": "/DoorprizeSinarmasland/static/css/main.ba526947.css.map",
+    "main.7fc822fe.js.map": "/DoorprizeSinarmasland/static/js/main.7fc822fe.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ba526947.css",
+    "static/js/main.7fc822fe.js"
+  ]
+}
