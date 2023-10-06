@@ -5,7 +5,7 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background-image: url('components/assets/UNITED\ NATIONS\ day\ 2023\ final.png');
+  background-image: url('components/assets/UNITED\ NATIONS\ day\ 2023\ \(1\).png');
   background-size: cover;
  
 }
@@ -15,7 +15,7 @@ body {
 }
 
 .numbers {
-  @apply border-2 border-primary p-4 w-[88px] h-24 flex items-center justify-center rounded-md select-none;
+  @apply border-2 border-primary p-4 w-[120px] h-[120px] flex items-center justify-center rounded-md select-none;
 }
 
 .numbers-inactive {

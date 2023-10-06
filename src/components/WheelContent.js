@@ -22,7 +22,8 @@ const WheelContent = () => {
   });
 
   const segments = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-  const segments2 = ["0","1","2"];
+  const segments2 = ["0","1"];
+  const segments3 = ["0", "1", "2", "3", "4", "5", "6", "7", "8"];
   const segColors = ["#FF0000", "#ffffff"];
 
   const onFinished = (winner, id) => {
@@ -81,15 +82,15 @@ const WheelContent = () => {
             buttonText="SPIN"
             isOnlyOnce={false}
             size={300}
-            upDuration={50}
-            downDuration={450}
+            upDuration={300}
+            downDuration={700}
             id="canvas1"
             textspace={130}
           />
         </div>
         <div className="absolute-center rotate-90">
           <WheelComponent
-            segments={segments}
+            segments={segments3}
             segColors={segColors}
             winningSegment=""
             onFinished={(winner) => onFinished(winner, 1)}
@@ -117,8 +118,8 @@ const WheelContent = () => {
             buttonText="SPIN"
             isOnlyOnce={false}
             size={180}
-            upDuration={50}
-            downDuration={350}
+            upDuration={150}
+            downDuration={400}
             id="canvas3"
             textspace={40}
           />
@@ -127,7 +128,7 @@ const WheelContent = () => {
         
         <button
           id="spin"
-          className="absolute-center rounded-full cursor-pointer rotate-90"
+          className="absolute-center  rounded-full cursor-pointer rotate-90"
           disabled={started}
           onClick={() => {
             setNumbers({
@@ -144,19 +145,19 @@ const WheelContent = () => {
             SPIN
           </span>
           {numbers[0] && (
-            <div className="w-0.5 h-60 bg-black absolute -top-60 left-1/2 -translate-x-1/2 z-[999]" />
+            <div className="w-2 h-60 bg-yellow-300 absolute -top-60 left-1/2 -translate-x-1/2 z-[999]" />
           )}
         </button>
       </div>
-      <div className="flex gap-4 justify-center mb-10 mr-20">
+      <div className="flex gap-4 justify-center  mb-5 mr-9" >
         <div className={numbers[0] ? "numbers-active" : "numbers-inactive"}>
-          {numbers[0] ? numbers[0] : "3th Num"}
+          {numbers[0] ? numbers[0] : "1st Num"}
         </div>
         <div className={numbers[1] ? "numbers-active" : "numbers-inactive"}>
-          {numbers[1] ? numbers[1] : "2th Num"}
+          {numbers[1] ? numbers[1] : "2nd Num"}
         </div>
         <div className={numbers[2] ? "numbers-active" : "numbers-inactive"}>
-          {numbers[2] ? numbers[2] : "1rd Num"}
+          {numbers[2] ? numbers[2] : "3rd Num"}
         </div>
         
       </div>
@@ -168,7 +169,9 @@ const WheelContent = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <div className="absolute-center w-full">
+            <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.12.0/tsparticles.confetti.bundle.min.js"></script>
+            
+            <div className=" w-full">
               <motion.div
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -179,10 +182,10 @@ const WheelContent = () => {
                 <div className="absolute inset-0 w-full h-full max-w-3xl mx-auto my-5 pointer-events-none">
                   <Confetti width="740" height="340" />
                 </div>
-                <p className="text-3xl text-slate-700 font-bold text-center w-full">
+                <p className="text-6xl text-slate-700 font-bold text-center w-full">
                   Winner Doorprize
                 </p>
-                <p className="text-4xl text-black font-bold text-center">
+                <p className="text-7xl text-black font-bold text-center">
                   {numbers[0] +
                     "  " +
                     numbers[1] +
@@ -190,7 +193,7 @@ const WheelContent = () => {
                     numbers[2] }
                 </p>
                 
-                <div className="button-wrap">
+                <div className="flex flex-row-reverse">
                   <button
                     className="button"
                     onClick={() => {
